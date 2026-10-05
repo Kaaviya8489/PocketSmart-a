@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PocketSmart AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>💰 PocketSmart AI</h1>
+    <p>Your Smart Budget & Recommendation Assistant</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>Set Your Monthly Budget</h2>
+      <input id="budget" type="number" placeholder="Enter budget ₹">
+      <button onclick="setBudget()">Set Budget</button>
+      <p id="budgetStatus">No budget set yet.</p>
+    </section>
+
+    <section class="card">
+      <h2>Add an Expense</h2>
+
+      <input id="expenseName" type="text" placeholder="Expense name">
+      <input id="expenseAmount" type="number" placeholder="Amount ₹">
+
+      <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Education</option>
+        <option>Bills</option>
+        <option>Other</option>
+      </select>
+
+      <button onclick="addExpense()">Add Expense</button>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span>Budget</span>
+        <strong id="totalBudget">₹0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Spent</span>
+        <strong id="totalSpent">₹0</strong>
+      </div>
+
+      <div class="stat">
+        <span>Remaining</span>
+        <strong id="remaining">₹0</strong>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🤖 Smart Recommendation</h2>
+      <p id="recommendation">
+        Add a budget and expenses to get a recommendation.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Expense History</h2>
+      <div id="expenseList"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
